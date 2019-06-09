@@ -1,5 +1,3 @@
-# Lista 09
-
 
   # Questão 1:
 
@@ -126,7 +124,7 @@ plot(reg, which = 1:4)
 # destoantes, além de não estarem distribuídos aleatoriamente ao longo da linha
 # da média no gráfico da análise residual. A distribuição dos resíduos parece
 # aproximar-se de uma normal. 
---------------------------------------------------------------------------------
+
 # Modelo level-log:
 
 # Transformar dados e criar nova base:
@@ -194,7 +192,8 @@ plot(reg2, which = 1:4)
 # erro padrão dos resíduos não apresentam a mesma variância (o RSE apresenta um 
 # valor relativamente alto, de 9.87). O modelo adequado para este caso é o 
 # log-log, que transforma em log tanto X, quanto Y. 
---------------------------------------------------------------------------------
+
+
 # Modelo log-log:
   
 # Transformar dados:
@@ -212,7 +211,7 @@ ggplot(data = ShortLeaf2, aes(y = Vol, x = Diam))+
 # Analisar resíduos:
 # Opção 1:
 resid4 <- resid(reg.log2)
-ggplot(data = ShortLeaf, aes(y = resid4, x = Diam)) +
+ggplot(data = ShortLeaf2, aes(y = resid4, x = Diam)) +
   geom_point()+
   geom_smooth(method = "lm", color = "lightblue", se = F)
 
@@ -261,7 +260,8 @@ plot(reg3, which = 1:4)
 # da VI. Também é possível observar que a distribuição dos resíduos aproxima-se
 # de uma distribuição normal; no entanto, a variância dos resíduos não é igual.
 # Para desenvolver um modelo melhor ajustado, é necessário transformar Y em log.
---------------------------------------------------------------------------------
+
+
 # Modelo log-level:
   
 # Transformar dados e criar nova base:
@@ -338,7 +338,8 @@ plot(reg4, which = 1:4)
 # adequado, já que os os resíduos estão muito dispersos e sugerem uma relação
 # não linear entre as variáveis, como é possível verificar pelo valor de 12.51 
 # do RSE e pela análise dos gráficos residuais.  
---------------------------------------------------------------------------------
+
+
 # Modelo quadrático:
 
 # Transformar dados (adicionar termo quadrático): 
